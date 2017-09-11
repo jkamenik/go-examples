@@ -1,33 +1,17 @@
-go-examples
-===========
+# go-examples
 
-Just some playing around with GoLang
+Just some playing around with GoLang.  This repo is meant to be used *as the GOPATH* (see `go help gopath` for details on what that means).
 
-Setup
------
+## Simple Setup
 
-This requires "go".  For Macs install it from homebrew.
+Use the `jkamenik/go:1.9` docker container.
 
-```
-$ brew install go
-```
-
-Install
--------
-
-```
+```bash
 $ git clone git@github.com:jkamenik/go-examples.git
+$ cd go-examples
+$ docker run -ti --rm -v $(pwd):/go jkamenik/go:1.9
 ```
 
-Usage
------
+## Usage
 
-Each dir is a self-contained executable.  You will need to setup the Go ENV variables and build the executables.
-
-```
-$ export GOPATH=`pwd`
-$ export GOBIN=`pwd`/bin
-$ go install src/new/*.go
-$ ./bin/new
-# output of the "new" program
-```
+Each directory is a separate example.
